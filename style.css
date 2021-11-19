@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: white;
+  margin: 1.5rem 0;
+}
+
+h1:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+p,
+span {
+  font-size: 1.8rem;
+  color: #8bacda;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #14253d;
+}
+
+.line {
+  padding: 0.05rem;
+  background-color: #2f415b;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  max-width: 40rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  -webkit-box-shadow: 1rem 2rem 5rem black;
+          box-shadow: 1rem 2rem 5rem black;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  opacity: 0.5;
+  border-radius: 1rem;
+  background-color: #00fff7;
+  width: 100%;
+  height: 100%;
+}
+
+.view-icon {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card-img {
+  position: relative;
+  background-image: url("./images/image-equilibrium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-img:hover {
+  cursor: pointer;
+}
+
+.card-img:hover .view-icon {
+  display: block;
+}
+
+.card-img:hover .hidden {
+  display: block;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+}
+
+.price img {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.price span {
+  vertical-align: middle;
+}
+
+.price .eth span {
+  color: #00fff7;
+}
+
+.footer {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer p {
+  margin: 0 0 0 1rem;
+}
+
+.footer span {
+  color: white;
+}
+
+.footer span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.avatar-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 10%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 60%;
+  }
+  .card {
+    margin: 2rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .avatar-img {
+    border: white solid 0.15rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

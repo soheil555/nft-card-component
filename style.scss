@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$veryDarkBlue-mainBG: hsl(217, 54%, 11%); //(main BG)
+$veryDarkBlue-cardBG: hsl(216, 50%, 16%); // (card BG)
+$veryDarkBlue-line: hsl(215, 32%, 27%); // (line)
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: $veryDarkBlue-mainBG;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: $white;
+  margin: 1.5rem 0;
+
+  &:hover {
+    color: $cyan;
+    cursor: pointer;
+  }
+}
+
+p,
+span {
+  font-size: 1.8rem;
+  color: $softBlue;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: $veryDarkBlue-cardBG;
+}
+
+.line {
+  padding: 0.05rem;
+  background-color: $veryDarkBlue-line;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 40rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 1rem 2rem 5rem black;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  opacity: 0.5;
+  border-radius: 1rem;
+  background-color: $cyan;
+  width: 100%;
+  height: 100%;
+}
+
+.view-icon {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-img {
+  position: relative;
+  background-image: url("./images/image-equilibrium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    cursor: pointer;
+
+    .view-icon {
+      display: block;
+    }
+
+    .hidden {
+      display: block;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+
+  img {
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+
+  .eth span {
+    color: $cyan;
+  }
+}
+
+.footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    margin: 0 0 0 1rem;
+  }
+
+  span {
+    color: $white;
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+  }
+}
+
+.avatar-img {
+  object-fit: cover;
+  width: 10%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 60%;
+  }
+
+  .card {
+    margin: 2rem;
+    box-shadow: none;
+  }
+
+  .avatar-img {
+    border: $white solid 0.15rem;
+  }
+}
